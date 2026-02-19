@@ -13,20 +13,20 @@ export default function ProjectsPage() {
   ];
 
   return (
-    <main className="max-w-3xl mx-auto px-6 py-20">
-      <h1 className="text-4xl font-bold mb-8">Projects</h1>
+    <div>
+      <h1 className="text-2xl mb-6">Projects</h1>
       <div className="space-y-6">
         {projects.map((project) => (
-          <a
+          
             key={project.title}
             href={project.link}
-            className="block border border-ink/20 rounded-lg p-6 hover:bg-ink/5 transition"
+            className="block border border-black rounded-lg p-6 hover:bg-black/5 transition"
           >
-            <h2 className="text-2xl font-semibold">{project.title}</h2>
+            <h2 className="text-xl font-semibold">{project.title}</h2>
             <p className="text-gray-700 mt-2">{project.description}</p>
           </a>
         ))}
       </div>
-    </main>
+    </div>
   );
 }
