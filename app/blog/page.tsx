@@ -16,7 +16,7 @@ export default function BlogPage() {
       {posts.length === 0 ? (
         <p className="text-gray-700">No posts yet — check back soon.</p>
       ) : (
-        <ul className="space-y-6">
+        <ul className="list-none ml-0 space-y-6">
           {posts.map((post) => (
             // Each post gets a list item with a link to its slug
             // The key prop is required by React when rendering
