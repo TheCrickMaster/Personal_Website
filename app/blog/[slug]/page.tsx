@@ -37,15 +37,9 @@ export default async function BlogPost({ params }: Props) {
 
   return (
     <div>
-      <div className="mb-6">
-        <Link href="/blog" className="text-sm">
-          ← Back to Blog
-        </Link>
-      </div>
-
       <article>
-        <h1 className="text-2xl mb-2">{post!.title}</h1>
-        <p className="text-sm mb-8">
+        <h1 className="text-2xl mb-1">{post!.title}</h1>
+        <p className="text-sm mb-6">
           {new Date(post!.date + "T00:00:00Z").toLocaleDateString("en-US", {
             year: "numeric",
             month: "long",
@@ -53,7 +47,6 @@ export default async function BlogPost({ params }: Props) {
             timeZone: "UTC",
           })}
         </p>
-
         <div className="prose-retro">
           <MDXRemote source={source} />
         </div>

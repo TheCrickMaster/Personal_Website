@@ -1,6 +1,48 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { IM_Fell_English, Lora, Courier_Prime } from "next/font/google";
 import "./globals.css";
+
+/*
+  FONT VARIABLE NAMES — Why the -face suffix?
+  ============================================
+  Tailwind v4's @theme block uses --font-display, --font-body, and
+  --font-mono as its own reserved variable names to generate the
+  font-display, font-body, font-mono utility classes.
+
+  next/font also needs to inject CSS variables for the loaded fonts.
+  If we named both "--font-display", they'd collide — next/font's
+  injected value would overwrite the @theme definition (or vice versa).
+
+  Solution: next/font injects under --font-display-face (etc.),
+  and @theme references them:
+    --font-display: var(--font-display-face), Georgia, serif;
+
+  This keeps both systems happy with no circular references.
+*/
+const imFellEnglish = IM_Fell_English({
+  weight: ["400"],
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+  variable: "--font-display-face",
+  display: "swap",
+});
+
+const lora = Lora({
+  weight: ["400", "500"],
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+  variable: "--font-body-face",
+  display: "swap",
+});
+
+const courierPrime = Courier_Prime({
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+  variable: "--font-mono-face",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Devdatta Kasture",
@@ -12,55 +54,79 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const fontClasses = [
+    imFellEnglish.variable,
+    lora.variable,
+    courierPrime.variable,
+  ].join(" ");
+
   return (
-    <html lang="en">
-      <body className="bg-[#9ACD32] text-black min-h-screen">
-        <div className="max-w-3xl mx-auto px-6 py-8">
-          {/* Header */}
-          <header className="mb-8">
-            <h1 className="text-3xl mb-4 font-serif">
-              <Link href="/" className="hover:underline">
+    <html lang="en" className={fontClasses}>
+      <body style={{ backgroundColor: "var(--color-parchment)", color: "var(--color-ink)", minHeight: "100vh" }}>
+        <div style={{ maxWidth: "680px", margin: "0 auto", padding: "2rem 1.5rem" }}>
+
+          <header style={{ marginBottom: "2rem", paddingBottom: "1.5rem", borderBottom: "1px solid var(--color-rule)" }}>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", flexWrap: "wrap", gap: "0.75rem" }}>
+
+              <Link
+                href="/"
+                style={{
+                  fontFamily: "var(--font-display)",
+                  fontSize: "1.25rem",
+                  color: "var(--color-ink)",
+                  textDecoration: "none",
+                  borderBottom: "none",
+                  letterSpacing: "0.05em",
+                }}
+              >
+                <span style={{ color: "var(--color-accent)" }}>[ </span>
                 Devdatta Kasture
+                <span style={{ color: "var(--color-accent)" }}> ]</span>
               </Link>
-            </h1>
-            
-          {/* Navigation */}
-<nav className="border-t border-b border-black py-2 font-serif italic">
-  <Link href="/" className="hover:underline">
-    home
-  </Link>
-  <span className="mx-2">·</span>
-  <Link href="/about" className="hover:underline">
-    about
-  </Link>
-  <span className="mx-2">·</span>
-  <Link href="/projects" className="hover:underline">
-    projects
-  </Link>
-  <span className="mx-2">·</span>
-  <Link href="/blog" className="hover:underline">
-    blog
-  </Link>
-  <span className="mx-2">·</span>
-  <Link href="/contact" className="hover:underline">
-    contact
-  </Link>
-  <span className="mx-2">·</span>
-  <Link href="/archive" className="hover:underline">
-    archive
-  </Link>
-</nav>
+
+              <nav aria-label="Main navigation">
+                <ul style={{ display: "flex", flexWrap: "wrap", gap: "1rem", listStyle: "none", padding: 0, margin: 0 }}>
+                  {[
+                    { href: "/",         label: "home"     },
+                    { href: "/about",    label: "about"    },
+                    { href: "/projects", label: "projects" },
+                    { href: "/blog",     label: "blog"     },
+                    { href: "/contact",  label: "contact"  },
+                    { href: "/archive",  label: "archive"  },
+                  ].map(({ href, label }) => (
+                    <li key={href}>
+                      <Link
+                        href={href}
+                        style={{
+                          fontFamily: "var(--font-mono)",
+                          fontSize: "0.85rem",
+                          color: "var(--color-ink-light)",
+                          textDecoration: "none",
+                          borderBottom: "1px solid transparent",
+                          letterSpacing: "0.08em",
+                          transition: "color 0.2s, border-color 0.2s",
+                        }}
+                        className="nav-link"
+                      >
+                        {label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            </div>
           </header>
-          
-          {/* Main Content */}
-          <main className="mb-16 font-serif">
+
+          <main style={{ marginBottom: "4rem", fontFamily: "var(--font-body)" }}>
             {children}
           </main>
-          
-          {/* Footer */}
-          <footer className="border-t border-black pt-4 text-sm text-center font-serif">
-            <p>Built with Next.js and Tailwind CSS</p>
+
+          <footer style={{ borderTop: "1px solid var(--color-rule)", paddingTop: "1rem", textAlign: "center" }}>
+            <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.75rem", color: "var(--color-ink-light)", margin: 0 }}>
+              Built with <code>Next.js</code> &amp; <code>Tailwind CSS</code>
+            </p>
           </footer>
+
         </div>
       </body>
     </html>

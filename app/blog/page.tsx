@@ -1,59 +1,63 @@
 import Link from "next/link";
 import { getAllPosts } from "@/lib/posts";
 
-// getAllPosts() is called at the top level of the component.
-// In Next.js App Router, page components run on the server
-// by default, meaning this filesystem read happens at
-// build/request time — never in the user's browser.
+/**
+ * BLOG LISTING PAGE — app/blog/page.tsx
+ *
+ * Server Component: getAllPosts() reads from the filesystem,
+ * which only works on the server. Next.js runs this at
+ * request/build time, never in the browser.
+ */
 export default function BlogPage() {
   const posts = getAllPosts();
 
   return (
     <div>
-      <h1 className="text-2xl mb-6">Blog</h1>
+      <h1 className="italic mb-6">Writing</h1>
 
-      {/* If no posts exist yet, show a fallback message */}
       {posts.length === 0 ? (
-        <p className="text-gray-700">No posts yet — check back soon.</p>
+        <p className="text-ink-light font-mono text-sm">
+          No posts yet — check back soon.
+        </p>
       ) : (
-        <ul className="list-none ml-0 space-y-6">
+        <ul className="list-none p-0 m-0">
           {posts.map((post) => (
-            // Each post gets a list item with a link to its slug
-            // The key prop is required by React when rendering
-            // lists — it helps React efficiently update the DOM
-            // when the list changes. slug is perfect for this
-            // because it's unique per post.
-            <li key={post.slug}>
-              <Link href={`/blog/${post.slug}`} className="group">
-
-                {/* Date displayed above the title in small text */}
-                <p className="text-sm mb-1">
-                  {/* formatDate converts "2026-01-06" to
-                      "January 6, 2026" for human readability.
-                      The UTC timezone is specified to prevent
-                      off-by-one-day bugs caused by timezone
-                      conversion when parsing the date string */}
-                  {new Date(post.date + "T00:00:00Z").toLocaleDateString(
-                    "en-US",
-                    {
-                      year: "numeric",
-                      month: "long",
-                      day: "numeric",
-                      timeZone: "UTC",
-                    }
-                  )}
-                </p>
-
-                <h2 className="text-xl group-hover:underline">
-                  {post.title}
+            /*
+              key prop: required by React for list rendering.
+              React uses it to efficiently reconcile DOM changes
+              when the list updates. slug is ideal — unique per post.
+            */
+            <li key={post.slug} className="entry">
+              <div className="entry-header">
+                <h2 className="font-display font-normal">
+                  <Link
+                    href={`/blog/${post.slug}`}
+                    className="hover:text-accent-dark"
+                  >
+                    {post.title}
+                  </Link>
                 </h2>
 
-                {/* Excerpt gives the reader a preview */}
-                <p className="text-gray-700 mt-1 text-sm">
-                  {post.excerpt}
-                </p>
+                {/*
+                  post.date + "T00:00:00Z" appends a UTC midnight time.
+                  Without this, JavaScript's Date constructor interprets
+                  "2026-01-06" as local midnight, which can shift the
+                  date backward by one day in timezones west of UTC.
+                */}
+                <time
+                  className="entry-date"
+                  dateTime={post.date}
+                >
+                  {new Date(post.date + "T00:00:00Z").toLocaleDateString(
+                    "en-US",
+                    { year: "numeric", month: "short", day: "numeric", timeZone: "UTC" }
+                  )}
+                </time>
+              </div>
 
-              </Link>
+              <p className="text-sm text-ink-light m-0 mt-1">
+                {post.excerpt}
+              </p>
             </li>
           ))}
         </ul>
