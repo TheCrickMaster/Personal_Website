@@ -93,6 +93,7 @@ export default function RootLayout({
                     { href: "/blog",     label: "blog"     },
                     { href: "/contact",  label: "contact"  },
                     { href: "/archive",  label: "archive"  },
+                    { href: "/resume",   label: "resume"   },
                   ].map(({ href, label }) => (
                     <li key={href}>
                       <Link
