@@ -17,8 +17,8 @@ export default function Home() {
         the accent left border + italic IM Fell English.
       */}
       <blockquote>
-        &ldquo;The purpose of a writer is to keep civilisation from destroying itself.&rdquo;
-        <cite>Albert Camus</cite>
+        &ldquo;For those who have conquered the mind, it is their friend. For those who have failed to do so, the mind works like an enemy.&rdquo;
+        <cite>Bhagavad Gita 6:6</cite>
       </blockquote>
 
       {/*
