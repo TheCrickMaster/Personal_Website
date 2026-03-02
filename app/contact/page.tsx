@@ -14,7 +14,7 @@ export default function ContactPage() {
       <dl>
         <dt>Email</dt>
         <dd>
-          <a href="devdatta.kasture@gmail.com">
+          <a href="mailto:devdatta.kasture@gmail.com">
             devdatta.kasture@gmail.com
           </a>
         </dd>

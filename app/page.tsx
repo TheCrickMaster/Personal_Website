@@ -28,28 +28,6 @@ export default function Home() {
 
       <hr />
 
-      {/*
-        Recent posts preview — hand-coded for the home page.
-      */}
-      <h2 className="mb-4 pb-2 border-b border-rule">Recent Writing</h2>
-
-      <article className="entry">
-        <div className="entry-header">
-          <h3>
-            <a href="/blog/first_blog">Welcome, I guess</a>
-          </h3>
-          {/*
-            <time> with a machine-readable datetime attribute.
-          */}
-          <time className="entry-date" dateTime="2026-01-06">
-            6 Jan 2026
-          </time>
-        </div>
-        <p className="text-sm text-ink-light m-0">
-          Late night incoherent ramblings and the occasional thing of value.
-        </p>
-      </article>
-
     </div>
   );
 }

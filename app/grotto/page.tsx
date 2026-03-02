@@ -3,39 +3,41 @@ export default function GrottoPage() {
     <div>
       <h1 className="text-2xl mb-2">The Grotto</h1>
       <p className="text-sm italic mb-8">
-        A corner of the internet for things I love — no particular theme,
-        no particular order. Just things worth sharing.
+        Welcome to my grotto! This page serves to curate a space for my hobbies and passions in a low stress environment.
+        Here, you can explore a bit more of my personality and what I get up to in my free time.  
       </p>
 
       {/* ── COOKING ────────────────────────────────────────────── */}
       <section className="mb-10">
         <h2 className="text-xl mb-1">Cooking</h2>
         <p className="text-sm italic mb-4">
-          Videos and articles that have changed the way I cook.
+          Some of my favorite recipes that I am currently obsessed with.
         </p>
         <ul style={{ listStyle: "none", margin: 0, padding: 0 }}>
           <li className="mb-4">
             <a
-              href="https://example.com"
+              href="https://www.vegrecipesofindia.com/misal-pav-recipe-misal-pav/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Video or Article Title
+              A fantastic recipe for Mishal Pav
             </a>
             <p className="text-sm mt-1">
-              A note on why this stuck with me or what I learned from it.
+              This is one of my favorite recipes for Mishal Pav, a spicy bread and lentil dish from Maharashtra. 
+              Typically, I like the potatoes to have some crunch to them, so I usually pan fry them and add them a bit later in the process.  
             </p>
           </li>
           <li className="mb-4">
             <a
-              href="https://example.com"
+              href="https://www.youtube.com/@Jose.elCook"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Another Video or Article
+              Jose el Cook on YouTube
             </a>
             <p className="text-sm mt-1">
-              Your thoughts on it — keep it casual and personal.
+              I discovered Jose from his recipe on elotes. He is my go to for any Latin American cusine I want to make. 
+              He's also a pretty funny guy.
             </p>
           </li>
         </ul>
