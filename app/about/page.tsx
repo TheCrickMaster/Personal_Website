@@ -1,14 +1,5 @@
 /**
  * ABOUT PAGE — app/about/page.tsx
- *
- * This page uses semantic HTML throughout:
- * - <dl><dt><dd>  for skill key-value pairs (Languages: Python, Rust...)
- * - <article>     for each resume entry (job, project)
- * - <time>        for machine-readable dates
- * - <section>     to group thematically related content
- *
- * The .entry, .entry-header, .entry-date, .entry-org classes
- * are defined in globals.css @layer components.
  */
 import Image from "next/image";
 

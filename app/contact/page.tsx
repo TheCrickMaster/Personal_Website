@@ -1,15 +1,5 @@
 /**
  * CONTACT PAGE — app/contact/page.tsx
- *
- * A minimal contact page in the spirit of the original site.
- * No contact form — just addresses, as the old-school web preferred.
- *
- * A form would require either:
- * a) A "use client" directive (to handle state/submission) — making it
- *    a Client Component, which increases the JS bundle sent to the browser.
- * b) A Server Action (Next.js 14+ feature) to handle submission server-side.
- *
- * For a personal site, a simple mailto link is the right trade-off.
  */
 export default function ContactPage() {
   return (
@@ -20,7 +10,7 @@ export default function ContactPage() {
         Feel free to reach out to me to discuss projects, collaborations, or simply to say hello! I usually try to respond within a few days. 
       </p>
 
-      {/* Contact links as a definition list — semantically correct */}
+      {/* Contact links as a definition list*/}
       <dl>
         <dt>Email</dt>
         <dd>

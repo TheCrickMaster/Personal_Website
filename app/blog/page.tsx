@@ -3,10 +3,6 @@ import { getAllPosts } from "@/lib/posts";
 
 /**
  * BLOG LISTING PAGE — app/blog/page.tsx
- *
- * Server Component: getAllPosts() reads from the filesystem,
- * which only works on the server. Next.js runs this at
- * request/build time, never in the browser.
  */
 export default function BlogPage() {
   const posts = getAllPosts();
@@ -23,9 +19,7 @@ export default function BlogPage() {
         <ul className="list-none p-0 m-0">
           {posts.map((post) => (
             /*
-              key prop: required by React for list rendering.
-              React uses it to efficiently reconcile DOM changes
-              when the list updates. slug is ideal — unique per post.
+             For list rendering.
             */
             <li key={post.slug} className="entry">
               <div className="entry-header">
@@ -39,10 +33,7 @@ export default function BlogPage() {
                 </h2>
 
                 {/*
-                  post.date + "T00:00:00Z" appends a UTC midnight time.
-                  Without this, JavaScript's Date constructor interprets
-                  "2026-01-06" as local midnight, which can shift the
-                  date backward by one day in timezones west of UTC.
+                  For timestamp formatting
                 */}
                 <time
                   className="entry-date"

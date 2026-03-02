@@ -125,7 +125,7 @@ export default function GrottoPage() {
           </li>
         </ul>
 
-        {/* YouTube placeholder — swap this out when your channel is live */}
+        {/* YouTube placeholder */}
         <div
           className="mt-6 border border-black p-4 text-sm"
           style={{ borderStyle: "dashed" }}

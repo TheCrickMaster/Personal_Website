@@ -1,40 +1,31 @@
 /**
  * PROJECTS PAGE — app/projects/page.tsx
- *
- * Projects use the .project-card component class (defined in globals.css)
- * instead of the generic rounded-lg card. The index-card style with a
- * left accent border feels more like a hand-written catalogue entry.
- *
- * THEORY — Data co-located with the component:
- * For a small, infrequently-changing list like this, defining the data
- * as a const array inside the component is perfectly acceptable.
- * It avoids the overhead of a CMS or MDX pipeline. If this grows to
- * 20+ projects, migrating to MDX files or a data file would make sense.
  */
 
 interface Project {
   title: string;
   description: string;
-  tech?: string;        // Optional — not all projects need a tech stack listed
-  link?: string;        // Optional — not all projects have a public URL
+  tech?: string;        // For projects with tech stack
+  link?: string;        // For projects with an external link
 }
 
 const projects: Project[] = [
   {
-    title: "Personal Website",
+    title: "Ameritegra Trading Systems",
     description:
-      "A handcrafted, rustic-themed site built with Next.js and Tailwind. " +
-      "Designed with typography as the primary aesthetic driver.",
-    tech: "Next.js, Tailwind CSS, TypeScript, MDX",
-    link: "https://example.com",
+      "A collection of tools and libraries for medium frequency systematic trading strategies. " +
+      "Includes a backtesting framework, live trading infrastructure, and various utilities for data processing and strategy development." +
+      "Currently in beta testing and not available to the public",
+    tech: "KDB+/q, Python, C++, Linux, Docker, Git, Financial Markets",
+    link: "https://www.ameritegratradingsystems.com/", // Placeholder link 
   },
   {
-    title: "Trading System",
+    title: "Personal Website",
     description:
-      "Algorithmic trading experiments and backtesting tools. " +
-      "Built to understand market microstructure rather than to get rich.",
-    tech: "Python, pandas, NumPy",
-    link: "https://example.com",
+      "The current website you&apos;re on! Built to showcase my projects and share my thoughts. " +
+      "Build with a directed focus on simplicity, readability, and a touch of personality.",
+    tech: "Next.js, Tailwind CSS, TypeScript, MDX",
+    link: "https://github.com/TheCrickMaster/Personal_Website",
   },
 ];
 
@@ -50,11 +41,6 @@ export default function ProjectsPage() {
 
       <div>
         {projects.map((project) =>
-          /*
-            Conditionally render as <a> or <div> depending on whether
-            a link exists. This is better than always wrapping in <a>
-            with an empty or placeholder href.
-          */
           project.link ? (
             <a
               key={project.title}
