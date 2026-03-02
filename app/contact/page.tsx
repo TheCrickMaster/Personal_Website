@@ -17,38 +17,37 @@ export default function ContactPage() {
       <h1 className="italic mb-6">Contact</h1>
 
       <p className="mb-8">
-        The best way to reach me is by email. I try to reply within a few
-        days, though I can&apos;t always promise speed.
+        Feel free to reach out to me to discuss projects, collaborations, or simply to say hello! I usually try to respond within a few days. 
       </p>
 
       {/* Contact links as a definition list — semantically correct */}
       <dl>
         <dt>Email</dt>
         <dd>
-          <a href="mailto:your.email@example.com">
-            your.email@example.com
+          <a href="devdatta.kasture@gmail.com">
+            devdatta.kasture@gmail.com
           </a>
         </dd>
 
         <dt>GitHub</dt>
         <dd>
           <a
-            href="https://github.com/yourusername"
+            href="https://github.com/TheCrickMaster"
             target="_blank"
             rel="noopener noreferrer"
           >
-            github.com/yourusername
+            https://github.com/TheCrickMaster
           </a>
         </dd>
 
         <dt>LinkedIn</dt>
         <dd>
           <a
-            href="https://linkedin.com/in/yourprofile"
+            href="https://www.linkedin.com/in/devdattakasture/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            linkedin.com/in/yourprofile
+            https://www.linkedin.com/in/devdattakasture/
           </a>
         </dd>
       </dl>
@@ -56,7 +55,7 @@ export default function ContactPage() {
       <hr />
 
       <p className="text-sm text-ink-light italic">
-        I am not on most social media platforms. Email is best.
+        At this time, I am not active on most social media platforms.
       </p>
     </div>
   );
