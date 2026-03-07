@@ -22,7 +22,7 @@ const projects: Project[] = [
   {
     title: "Personal Website",
     description:
-      "The current website you&apos;re on! Built to showcase my projects and share my thoughts. " +
+      "The current website you're on! Built to showcase my projects and share my thoughts. " +
       "Build with a directed focus on simplicity, readability, and a touch of personality.",
     tech: "Next.js, Tailwind CSS, TypeScript, MDX",
     link: "https://github.com/TheCrickMaster/Personal_Website",
