@@ -34,7 +34,7 @@ export default function AboutPage() {
       <p>
         Sports has always been central to my life; I played soccer and swam competitively growing up, and support the Chicago Bears, Bulls, and White Sox franchises. Over the pond, I support Brentford FC in the English Premier League.
         I am drawn to deep philosophical and cultural conversations. How I see the world has been shaped by the remarkable people I have met and learned from.
-        At the moment I am teaching myself to shoot and edit long-form video, crocheting the occasional trinket, and reconnecting back to my cultural roots.
+        At the moment I am shooting and editing long-form video, crocheting the occasional trinket, and reconnecting back to my cultural roots.
       </p>
     </div>
   );

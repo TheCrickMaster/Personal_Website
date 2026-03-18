@@ -35,7 +35,7 @@ export default function ProjectsPage() {
       <h1 className="italic mb-6">Projects</h1>
 
       <p className="mb-8 text-ink-light">
-        These are the current projects I am working on. Some have been completed and public while others are still in progress. I welcome any constructive feedback or questions about any of these projects.
+        These are my current projects. Some have been completed and public while others are still in progress. Any constructive feedback or questions about any of these projects is graciously welcomed.
       </p>
 
       <div>
