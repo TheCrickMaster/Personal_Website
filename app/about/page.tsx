@@ -32,8 +32,8 @@ export default function AboutPage() {
       </p>
 
       <p>
-        Outside of academics and work, I am a man of many interests. Sports has always been central to my life; I played soccer competitively growing up, and I remain a supporter of the Chicago Bears, Bulls, and White Sox. In football, I support Brentford FC in the English Premier League.
-        I am drawn to deep philosophical and cultural conversations, and much of how I see the world has been shaped by the remarkable people from different backgrounds I have had the chance to meet and learn from.
+        Sports has always been central to my life; I played soccer and swam competitively growing up, and support the Chicago Bears, Bulls, and White Sox franchises. Over the pond, I support Brentford FC in the English Premier League.
+        I am drawn to deep philosophical and cultural conversations. How I see the world has been shaped by the remarkable people I have met and learned from.
         At the moment I am teaching myself to shoot and edit long-form video, crocheting the occasional trinket, and reconnecting back to my cultural roots.
       </p>
     </div>

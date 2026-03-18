@@ -21,8 +21,8 @@ export default function Home() {
       {/*
       */}
       <p className="intro">
-        My name is Devdatta, and this is my corner of the web. On this site, you will find a collection of my current projects, writings, hobbies, and other things I find interesting.
-        I hope my perspectives help to uniquely inform your own, and that you find something here that resonates with you.  
+        My name is Devdatta, and this is my corner of the web. On this site, you will find a collection of my current projects, writings, hobbies, and other things of interest.
+        Hopfully, my perspectives help to uniquely inform your own, and that you find something here that resonates.  
       </p>
 
 
