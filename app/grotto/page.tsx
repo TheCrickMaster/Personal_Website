@@ -49,32 +49,33 @@ export default function GrottoPage() {
       <section className="mb-10 mt-8">
         <h2 className="text-xl mb-1">Crochet</h2>
         <p className="text-sm italic mb-4">
-          Patterns, projects, and things I&apos;m currently working on.
+          Patterns I like and some trinkets I have made
         </p>
         <ul style={{ listStyle: "none", margin: 0, padding: 0 }}>
           <li className="mb-4">
             <a
-              href="https://example.com"
+              href="https://youtu.be/QVsU-auI5O8?si=flaUe_IPqACdtRB7"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Pattern or Resource Name
+              A nice beanie hat
             </a>
             <p className="text-sm mt-1">
-              Notes on the pattern — difficulty, yarn used, what you&apos;d
-              change next time.
+              I like the pattern of this beanie because it uses simple double crochet stitches,
+              so both beginners and experienced crocheters can make it. One piece of advice is to not do too
+              many increases at the top so you do not chinch too tight. 
             </p>
           </li>
           <li className="mb-4">
             <a
-              href="https://example.com"
+              href="https://kristitullus.com/blogs/news/free-pattern-tiny-teddy-bear"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Another Pattern or Project
+              Small teddy bear pattern
             </a>
             <p className="text-sm mt-1">
-              What drew you to this one and how it turned out.
+              I think this would be a nice gift for a baby shower. 
             </p>
           </li>
         </ul>
@@ -86,19 +87,22 @@ export default function GrottoPage() {
       <section className="mb-10 mt-8">
         <h2 className="text-xl mb-1">Fashion</h2>
         <p className="text-sm italic mb-4">
-          Pieces, designers, and inspo that I keep coming back to.
+          Everything Fashion
         </p>
         <ul style={{ listStyle: "none", margin: 0, padding: 0 }}>
           <li className="mb-4">
             <a
-              href="https://example.com"
+              href="https://tfnuiuc.substack.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Brand, Article, or Lookbook
+              The Fashion Network Substack
             </a>
             <p className="text-sm mt-1">
-              What you like about it — the aesthetic, the ethos, the fit.
+              The Fashion Network is a student club at the University at Illinois that explores current fashion trends,
+              social commentary on the broader fashion industry, and fashion in popular culture. You can find my blogs on the Substack, as well as the weekly newsletter
+              that you can subscribe to. 
+              
             </p>
           </li>
         </ul>
@@ -110,19 +114,22 @@ export default function GrottoPage() {
       <section className="mb-10 mt-8">
         <h2 className="text-xl mb-1">Video &amp; Photography</h2>
         <p className="text-sm italic mb-4">
-          Creators, gear, and editing resources I find myself returning to.
+          Creators, gear, and editing resources.
         </p>
         <ul style={{ listStyle: "none", margin: 0, padding: 0 }}>
           <li className="mb-4">
             <a
-              href="https://example.com"
+              href="https://www.youtube.com/@michaelmackelvie/featured"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Creator or Resource Name
+            Michael Mackelvie on YouTube
             </a>
             <p className="text-sm mt-1">
-              What makes their work stand out — style, technique, storytelling.
+            In my opinion, Michael is the best YouTuber for sports commentary and deep dives into the pschology of athletes.
+            He is objective in his analysis (hard to find these days) and his commentary style engages the viewer in a way that is easy to digest.
+            He makes complex topics in sports easy to understand. As a numbers guy, I like his statistical analysis and his visualizations are top notch.
+            Check him out if you like sports and want to learn more about the mental game of athletes. 
             </p>
           </li>
         </ul>
