@@ -1,17 +1,6 @@
 /*
   TAILWIND V4 SYNTAX
   ==================
-  In v4, you replace the three @tailwind directives with a single
-  @import "tailwindcss" statement. The design tokens (colors, fonts,
-  spacing) move out of tailwind.config.ts and into an @theme block
-  right here in the CSS file.
-
-  @theme tells Tailwind: "generate utility classes from these variables."
-  So --color-parchment becomes bg-parchment, text-parchment, border-parchment.
-  And --font-display becomes the font-display utility class.
-
-  We rename next/font's injected variables to --font-display-face (etc.)
-  in layout.tsx to avoid a circular reference, then reference them here.
 */
 @import "tailwindcss";
 
@@ -26,9 +15,7 @@
   --color-accent-dark:    #6a2c23;
 
   /*
-    Fonts — we reference the CSS variables injected by next/font in layout.tsx.
-    Those variables are named --font-display-face, --font-body-face, --font-mono-face
-    (note the -face suffix) to avoid conflicting with these @theme entries.
+    Fonts
   */
   --font-display: var(--font-display-face), Georgia, serif;
   --font-body:    var(--font-body-face), Georgia, serif;
@@ -36,8 +23,7 @@
 }
 
 /*
-  :root — CSS custom properties for raw values we need in plain CSS contexts
-  (gradients, borders, pseudo-elements) where @apply isn't available.
+  :root
 */
 :root {
   --color-parchment:      #f4efe6;

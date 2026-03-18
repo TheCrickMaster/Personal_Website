@@ -4,21 +4,8 @@ import { IM_Fell_English, Lora, Courier_Prime } from "next/font/google";
 import "./globals.css";
 
 /*
-  FONT VARIABLE NAMES — Why the -face suffix?
+  FONT VARIABLE NAMES
   ============================================
-  Tailwind v4's @theme block uses --font-display, --font-body, and
-  --font-mono as its own reserved variable names to generate the
-  font-display, font-body, font-mono utility classes.
-
-  next/font also needs to inject CSS variables for the loaded fonts.
-  If we named both "--font-display", they'd collide — next/font's
-  injected value would overwrite the @theme definition (or vice versa).
-
-  Solution: next/font injects under --font-display-face (etc.),
-  and @theme references them:
-    --font-display: var(--font-display-face), Georgia, serif;
-
-  This keeps both systems happy with no circular references.
 */
 const imFellEnglish = IM_Fell_English({
   weight: ["400"],
