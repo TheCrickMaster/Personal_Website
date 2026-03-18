@@ -11,7 +11,7 @@ export default function GrottoPage() {
       <section className="mb-10">
         <h2 className="text-xl mb-1">Cooking</h2>
         <p className="text-sm italic mb-4">
-          Some of my favorite recipes that I am currently obsessed with.
+          Some of my favorite recipes.
         </p>
         <ul style={{ listStyle: "none", margin: 0, padding: 0 }}>
           <li className="mb-4">
@@ -49,7 +49,7 @@ export default function GrottoPage() {
       <section className="mb-10 mt-8">
         <h2 className="text-xl mb-1">Crochet</h2>
         <p className="text-sm italic mb-4">
-          Patterns I like and some trinkets I have made
+          Patterns and trinkets I like
         </p>
         <ul style={{ listStyle: "none", margin: 0, padding: 0 }}>
           <li className="mb-4">
