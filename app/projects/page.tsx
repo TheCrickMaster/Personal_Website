@@ -14,7 +14,7 @@ const projects: Project[] = [
     title: "Ameritegra Trading Systems",
     description:
       "A collection of tools and libraries for medium frequency systematic trading strategies. " +
-      "Includes a backtesting framework, live trading infrastructure, and various utilities for data processing and strategy development." +
+      "Includes a backtesting framework, live trading infrastructure, and various utilities for data processing and strategy development. " +
       "Currently in beta testing and not available to the public",
     tech: "KDB+/q, Python, C++, Linux, Docker, Git, Financial Markets",
     link: "https://www.ameritegratradingsystems.com/", // Placeholder link 
@@ -23,7 +23,7 @@ const projects: Project[] = [
     title: "Personal Website",
     description:
       "The current website you're on! Built to showcase my projects and share my thoughts. " +
-      "Build with a directed focus on simplicity, readability, and a touch of personality.",
+      "Build with a directed focus on simplicity, readability, and a touch of my personality.",
     tech: "Next.js, Tailwind CSS, TypeScript, MDX",
     link: "https://github.com/TheCrickMaster/Personal_Website",
   },
