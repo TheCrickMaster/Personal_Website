@@ -39,7 +39,7 @@ export default async function BlogPost({ params }: Props) {
     <div>
       <article>
         <h1 className="text-2xl mb-1">{post!.title}</h1>
-        <p className="text-sm mb-6">
+        <p className="text-sm mb-2">
           {new Date(post!.date + "T00:00:00Z").toLocaleDateString("en-US", {
             year: "numeric",
             month: "long",
@@ -47,6 +47,22 @@ export default async function BlogPost({ params }: Props) {
             timeZone: "UTC",
           })}
         </p>
+
+        {post!.tags.length > 0 && (
+          <ul className="tag-list mb-6">
+            {post!.tags.map((t) => (
+              <li key={t}>
+                <Link
+                  href={`/blog?tag=${encodeURIComponent(t)}`}
+                  className="tag-chip"
+                >
+                  {t}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        )}
+
         <div className="prose-retro">
           <MDXRemote source={source} />
         </div>
